@@ -13,12 +13,12 @@ from fastapi.middleware.cors import CORSMiddleware
 dictConfig(LogConfig().dict())
 logger = logging.getLogger("Engine")
 
-# allowed Origins
-origins = [
-    "https://localhost:3000",
-    "http://localhost:3000",
-    "https://fplteamview.com"
-]
+# # allowed Origins
+# origins = [
+#     "https://localhost:3000",
+#     "http://localhost:3000",
+#     "https://fplteamview.com"
+# ]
 
 # Load Env File
 load_dotenv(".env")
@@ -29,14 +29,14 @@ settings = Settings()
 # Create App Instance
 app = FastAPI()
 
-# allowed Middleware
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"]
-)
+# # allowed Middleware
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=origins,
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"]
+# )
 
 
 # Include Created Routes
